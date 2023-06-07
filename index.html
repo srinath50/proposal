@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font: 400 15px/1.8;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #777;
+      }
+
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        position: relative;
+        opacity: 0.85;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .bgimg-1 {
+        background-image: url("img_parallax.jpg");
+        min-height: 100%;
+      }
+
+      .bgimg-2 {
+        background-image: url("img_parallax2.jpg");
+        min-height: 400px;
+      }
+
+      .bgimg-3 {
+        background-image: url("img_parallax3.jpg");
+        min-height: 400px;
+      }
+
+      .caption {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        text-align: center;
+        color: #000;
+      }
+
+      .caption span.border {
+        background-color: #111;
+        color: #fff;
+        padding: 18px;
+        font-size: 25px;
+        letter-spacing: 10px;
+      }
+      button {
+        padding: 18px;
+      }
+
+      h3 {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        font: 20px "Lato", sans-serif;
+        color: #111;
+      }
+
+      /* Turn off parallax scrolling for tablets and phones */
+      @media only screen and (max-device-width: 1024px) {
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+          background-attachment: scroll;
+        }
+      }
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bgimg-1">
+      <div class="caption">
+        <span class="border" onclick="">SCROLL DOWN</span>
+      </div>
+    </div>
+
+    <div
+      style="
+        color: #777;
+        background-color: white;
+        text-align: center;
+        padding: 50px 80px;
+        text-align: justify;
+      "
+    >
+      <h3 style="text-align: center">marriage proposal</h3>
+      <p>
+        The person who sent you this want you to know that you are the one he
+        needs to share his life. And, yes he want you to be his life partner.
+        You are the one he want to love for the rest of his life. Click the
+        button below to give your answer.
+      </p>
+    </div>
+
+    <div class="bgimg-2">
+      <div class="caption">
+        <span
+          class="border"
+          style="background-color: transparent; font-size: 25px; color: #f7f7f7"
+          ><button onclick="myFunction()">CLICK HERE</button></span
+        >
+      </div>
+    </div>
+
+    <div style="position: relative">
+      <div
+        style="
+          color: #ddd;
+          background-color: #282e34;
+          text-align: center;
+          padding: 50px 80px;
+          text-align: justify;
+        "
+      >
+        <p>He want to tell you something</p>
+      </div>
+    </div>
+
+    <div class="bgimg-3">
+      <div class="caption">
+        <span
+          class="border"
+          style="background-color: transparent; font-size: 25px; color: #f7f7f7"
+          >SCROLL DOWN</span
+        >
+      </div>
+    </div>
+
+    <div style="position: relative">
+      <div
+        style="
+          color: #ddd;
+          background-color: #282e34;
+          text-align: center;
+          padding: 50px 80px;
+          text-align: justify;
+        "
+      >
+        <p id="demo"></p>
+      </div>
+    </div>
+
+    <div class="bgimg-1">
+      <div class="caption">
+        <span class="border">BE MY GIRL!</span>
+      </div>
+    </div>
+    <script>
+      function myFunction() {
+        let text;
+        if (confirm("Will you marry me ?") == true) {
+          text =
+            "I am not a King. But from now on I am gonna treat you like a Queen";
+        } else {
+          text = "I will make you say yes wait for me";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+  </body>
+</html>
